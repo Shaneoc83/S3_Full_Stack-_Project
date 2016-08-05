@@ -1,1 +1,1 @@
-wen: gunicorn blog_app.wsgi:application
+web: gunicorn blog_app.wsgi:application
