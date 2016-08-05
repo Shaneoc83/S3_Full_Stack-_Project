@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="row">
+
+        <div class="col-md col-sm-3 text-center">
+            <a class="story-img" href="#">
+                <img src="http://www.themusicninja.com/wp-content/uploads/2010/05/tornator2.gif"
+                     style="width: 100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
+            </a>
+        </div>
+        <div class="col-md-10 col-sm-9">
+            <h3>{{ post.title }}</h3>
+            <div class="row">
+                <div class="col-xs-9">
+                    <figure class="img-container">
+                        {% if post.image %}
+                            <img src="{{ MEDIA_URL }}{{ post.image }}">
+                        {% endif %}
+                    </figure>
+                    <p>{{ post.content | linebreaks }}</p>
+                    <p>
+                        <button class="btn btn-default" onclick="location.href='/blog'">Back to Blog.</button>
+                        <button class="btn btn-default" onclick="location.href='{% url 'edit' post.id %}' ">Edit.
+                        </button>
+                    </p>
+                    <p>{{ post.published_date }} | Views{{ post.views }}</p>
+                    {% load disqus_tags %}
+                    {% set_disqus_title post.title %}
+                    {% disqus_show_comments %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

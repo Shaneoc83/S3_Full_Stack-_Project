@@ -1,0 +1,77 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Art of Home Economics</title>
+    <meta name="viewport" content="width-device-width, initial0scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static "css/blog.css" %}">
+    {% block head_js %}{% endblock %}
+    {% block css %}
+    {% endblock %}
+</head>
+<body background="{% static "css/backpic.jpg" %}">
+<div id="masthead">
+    <div class="container" >
+        <div class="row">
+            <h1> Un-Stacked
+                <p id="logo" class="lead">    The Art of Home Economics</p>
+            </h1>
+            <ul class="nav nav-pills pull right">
+                <li><a href="/">Home</a></li>
+                <li><a href="/pages/homeec/">About Home Economics</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                {% if user.is_authenticated %}
+{#                <li><a href="/products/">Products</a></li>#}
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+            {% else %}
+                <li><a href="{% url 'register' %}">Register</a></li>
+{#                <li><a href="/products/">Products</a></li>#}
+                <li><a href="{% url 'login' %}">Log In</a></li>
+            {% endif %}
+            </ul>
+
+        </div>
+
+
+            {% if messages %}
+                 <div class="alert alert-success">
+                     <div class="message">
+                          {% for message in messages %}
+                          {{ message }}
+                          {% endfor %}
+                     </div>
+                 </div>
+            {% endif %}
+
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="panel-body">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <p>Made by me for you</p>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+{% block js %}
+{% endblock %}
+</body>
+</html>

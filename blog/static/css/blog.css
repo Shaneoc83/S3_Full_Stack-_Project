@@ -1,0 +1,140 @@
+.navbar-form input, .form-inline input {
+    width: auto;
+}
+
+body {
+    /*background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.2)), url("backpic.jpg");*/
+    font-family: Helvetica, sans-serif;
+    padding-top: 50px;
+    background-repeat: no-repeat;
+    /*background-size: 100% ;*/
+    background-size: cover;
+    /*background-position: center;*/
+    /*background-size: 100%;*/
+    background-attachment: fixed;
+
+}
+
+footer {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ededed;
+    position: fixed;
+    height: 30px;
+    bottom: 0;
+    width: 100%;
+
+}
+
+h1  {
+    color: white;
+    text-decoration: none;
+}
+
+#masthead {
+    padding-left: 10px;
+    min-height: 199px;
+    color: #ffffff;
+}
+
+#masthead h1 {
+    font-size: 55px;
+    line-height: 1;
+    margin-top: 50px;
+
+}
+
+#masthead .well {
+    margin-top: 31px;
+    min-height: 127px;
+
+
+}
+
+.navbar.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#logo {
+    color: #ffffff;
+}
+
+.story-img {
+    margin-top: 25px;
+    display: block;
+}
+
+a, a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.icon-bar {
+    background: #fff;
+}
+
+.dropdown-menu {
+    min-width: 250px;
+}
+
+.panel {
+    border-color: transparent;
+    border-radius: 0;
+}
+
+.thumbnail {
+    margin-bottom: 8px;
+}
+
+.img-container {
+    overflow: hidden;
+    height: 170px;
+}
+
+.img-container img {
+    min-width: 280px;
+    min-height: 180px;
+    max-width: 380px;
+    max-height: 280px;
+}
+
+.txt-container {
+    overflow: hidden;
+    height: 100px;
+}
+
+.panel .lead {
+    overflow: hidden;
+    height: 90px;
+}
+
+.label-float {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    opacity: .9;
+    padding: 6px;
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    #masthead h1 {
+        font-size: 80px;
+        margin-left: 25px;
+
+}
+
+.row {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+    text-decoration: none;
+     background-color: transparent;
+}}
