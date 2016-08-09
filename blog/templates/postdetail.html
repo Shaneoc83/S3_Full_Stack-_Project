@@ -22,8 +22,10 @@
                     <p>{{ post.content | linebreaks }}</p>
                     <p>
                         <button class="btn btn-default" onclick="location.href='/blog'">Back to Blog.</button>
+                        {% if post.author == user %}
                         <button class="btn btn-default" onclick="location.href='{% url 'edit' post.id %}' ">Edit.
                         </button>
+                        {% endif %}
                     </p>
                     <p>{{ post.published_date }} | Views{{ post.views }}</p>
                     {% load disqus_tags %}

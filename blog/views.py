@@ -43,7 +43,7 @@ def edit_post(request, id):
             post.save()
             return redirect(post_details, post.pk)
     else:
-        form = BlogPostForm()
+        form = BlogPostForm(instance=post)
 
     return render(request, 'blogpostform.html', {'form': form})
 
