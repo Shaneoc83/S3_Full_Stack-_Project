@@ -27,6 +27,11 @@ footer {
 
 }
 
+.nav-pills>li>a {
+    border-radius: 4px;
+    color: white;
+}
+
 h1  {
     color: white;
     text-decoration: none;
@@ -68,7 +73,7 @@ h1  {
 }
 
 a, a:hover {
-    color: #ffffff;
+    color: #022f5a;
     text-decoration: none;
 }
 
